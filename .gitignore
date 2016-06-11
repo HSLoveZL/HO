@@ -3,4 +3,6 @@
 .idea/modules.xml
 .idea/myflasky.iml
 .idea/workspace.xml
-/Example/mydata.ini
+
+Example/mydata.ini
+
