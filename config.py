@@ -18,8 +18,7 @@ class Config:
     MAIL_USERNAME = cf.get("MAIL", "MAIL_USERNAME")
     MAIL_PASSWORD = cf.get("MAIL", "MAIL_PASSWORD")
     FLASKY_MAIL_SUBJECT_PREFIX = '[Flasky]'
-    FLASKY_MAIL_SENDER = 'Horton Flasky <weiyijingtu@sina.com>'
-    # FLASKY_ADMIN = os.environ.get('FLASKY_ADMIN')
+    FLASKY_MAIL_SENDER = '857018659@qq.com'
     FLASKY_ADMIN = 'wcbieyuan@gmail.com'
 
     @staticmethod
