@@ -1,11 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
-.idea/misc.xml
-.idea/modules.xml
-.idea/myflasky.iml
-.idea/workspace.xml
-
 mydata.ini
-
+/.idea/
 /venv/
 app/__init__.pyc
 app/auth/__init__.pyc
@@ -24,3 +19,4 @@ migrations/versions/38c4e85512a9_initial_migration.pyc
 migrations/versions/456a945560f6_login_support.pyc
 tests/test_basics.pyc
 tests/test_user_model.pyc
+
