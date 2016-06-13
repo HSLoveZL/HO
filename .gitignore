@@ -6,3 +6,21 @@
 
 mydata.ini
 
+/venv/
+app/__init__.pyc
+app/auth/__init__.pyc
+app/auth/forms.pyc
+app/auth/views.pyc
+app/email.pyc
+app/main/__init__.pyc
+app/main/errors.pyc
+app/main/forms.pyc
+app/main/views.pyc
+app/models.pyc
+config.pyc
+migrations/env.pyc
+migrations/versions/190163627111_account_confirmation.pyc
+migrations/versions/38c4e85512a9_initial_migration.pyc
+migrations/versions/456a945560f6_login_support.pyc
+tests/test_basics.pyc
+tests/test_user_model.pyc
