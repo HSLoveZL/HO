@@ -11,6 +11,7 @@ cf.readfp(open('mydata.ini'))
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'hard to guess string'
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
 
     MAIL_SERVER = 'smtp.qq.com'
     MAIL_PORT = 25
