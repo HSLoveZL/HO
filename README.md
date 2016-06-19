@@ -24,3 +24,5 @@ http://www.ittang.com/2014/0720/13403.html
 进入虚拟环境后`pip install -r 项目目录下\requirements.txt`
 
 2. Linux：
+参考：
+http://virtualenvwrapper.readthedocs.io/en/latest/
