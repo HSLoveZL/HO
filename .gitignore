@@ -3,3 +3,5 @@ mydata.ini
 /.idea/
 *.pyc
 *.sqlite
+/flask_venv
+/logs
