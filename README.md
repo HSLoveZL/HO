@@ -3,6 +3,7 @@ my flasky
 
 
 # 阿里云部署笔记
+目前部署位置：http://121.40.213.161/
 Flask + uwsgi + nginx
 主要参考：
 http://www.cnblogs.com/Ray-liang/p/4173923.html?utm_source=tuicool&utm_medium=referral  
@@ -26,3 +27,21 @@ http://www.ittang.com/2014/0720/13403.html
 2. Linux：
 参考：
 http://virtualenvwrapper.readthedocs.io/en/latest/
+
+
+# 从sqlite转移到Mysql（ubuntu平台）
+参考：
+http://www.cnblogs.com/wangqingbaidu/p/3241954.html
+http://www.cnblogs.com/xiazh/archive/2012/12/12/2814289.html
+http://www.111cn.net/database/mysql/44142.htm
+1. `sudo apt-get install mysql-server`安装mysql
+2. `pip install python-mysqldb` （虚拟环境中） 
+如果报错`EnvironmentError: mysql_config not found`
+可以安装`apt-get install libmysqlclient-dev`
+3. 本地登陆mysql数据库，创建root账户和密码，在登陆过程中如果遇到
+`ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password:YES)`
+可以试试修改密码`mysqladmin -u root -p password 'newpassword'`
+在工程中的个人密码配置文件`mydata.ini`中加入MySQL的配置项
+4. （虚拟环境中）`python manage.py shell `
+`db.create_all()`创建所有的表
+`Role.insert_roles()`创建role表中的角色
