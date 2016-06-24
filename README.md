@@ -45,3 +45,7 @@ http://www.111cn.net/database/mysql/44142.htm
 4. （虚拟环境中）`python manage.py shell `
 `db.create_all()`创建所有的表
 `Role.insert_roles()`创建role表中的角色
+
+# 从sqlite转移到Mysql(Windows平台)
+和Ubuntu中最大的不同的是解决虚拟环境中没有MySQLdb模块的问题
+通过（虚拟环境中）`pip install mysqlclient`解决
