@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 from datetime import datetime
 import hashlib
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -131,7 +132,7 @@ class User(UserMixin, db.Model):
 
     @property
     def password(self):
-        raise AttributeError('password is not a readable attribute')
+        raise AttributeError(u'密码不是一个可读的属性')
 
     @password.setter
     def password(self, password):
@@ -336,7 +337,7 @@ class Post(db.Model):
     def from_json(json_post):
         body = json_post.get('body')
         if body is None or body == '':
-            raise ValidationError('post does not have a body')
+            raise ValidationError(u'博客不能为空')
         return Post(body=body)
 
 
@@ -377,7 +378,7 @@ class Comment(db.Model):
     def from_json(json_comment):
         body = json_comment.get('body')
         if body is None or body == '':
-            raise ValidationError('comment does not have a body')
+            raise ValidationError(u'评论不能为空')
         return Comment(body=body)
 
 
