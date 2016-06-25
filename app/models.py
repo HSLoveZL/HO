@@ -378,7 +378,7 @@ class Comment(db.Model):
     def from_json(json_comment):
         body = json_comment.get('body')
         if body is None or body == '':
-            raise ValidationError(u'评论不能为空')
+            raise ValidationError(u'评论不能 为空')
         return Comment(body=body)
 
 
