@@ -8,7 +8,7 @@ cf.readfp(open('mydata.ini'))
 
 
 class Config:
-    SECRET_KEY = os.environ.get('SECRET_KEY') or 'hard to guess string'
+    SECRET_KEY = os.environ.get('SECRET_KEY') or cf.get("APP", "SECRET_KEY")
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     SQLALCHEMY_TRACK_MODIFICATIONS = True
 
@@ -17,7 +17,7 @@ class Config:
     MAIL_USE_TLS = True
     MAIL_USERNAME = cf.get("MAIL", "MAIL_USERNAME")
     MAIL_PASSWORD = cf.get("MAIL", "MAIL_PASSWORD")
-    FLASKY_MAIL_SUBJECT_PREFIX = '[Flasky]'
+    FLASKY_MAIL_SUBJECT_PREFIX = '[HO]'
     FLASKY_MAIL_SENDER = '857018659@qq.com'
     FLASKY_ADMIN = 'wcbieyuan@gmail.com'
     FLASKY_POSTS_PER_PAGE = 20
