@@ -1,6 +1,14 @@
 # myflasky
 my flasky
-
+请在项目根目录下创建项目密码配置文件mydata.ini
+配置项目包括
+[MAIL]
+MAIL_USERNAME=***
+MAIL_PASSWORD=***
+[MySQL]
+MySQL_PASSWORD=***
+[APP]
+SECRET_KEY=***
 
 # 阿里云部署笔记
 目前部署位置：http://121.40.213.161/
@@ -15,7 +23,7 @@ http://duzhipeng.com/pages/150921/
 1. 安装pip时候要用 `sudo apt-get install python-pip`
 2. 在uwsgi的ini文件中 `chdir = /home/www/` 要改成 `chdir = /home/www/my_flask`
 
-# 环境搭建
+# 虚拟环境搭建
 参考：
 http://www.ittang.com/2014/0720/13403.html
 使用virtualenvwrapper
@@ -41,6 +49,7 @@ http://www.111cn.net/database/mysql/44142.htm
 3. 本地登陆mysql数据库，创建root账户和密码，在登陆过程中如果遇到
 `ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password:YES)`
 可以试试修改密码`mysqladmin -u root -p password 'newpassword'`
+创建本项目需要的数据库`create database myflasky;` 然后退出mysql
 在工程中的个人密码配置文件`mydata.ini`中加入MySQL的配置项
 4. （虚拟环境中）`python manage.py shell `
 `db.create_all()`创建所有的表
