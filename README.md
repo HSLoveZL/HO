@@ -1,5 +1,5 @@
 # myflasky
-my flasky
+my flasky - HO
 请在项目根目录下创建项目密码配置文件mydata.ini
 配置项目包括
 [MAIL]
