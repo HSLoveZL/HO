@@ -1,5 +1,6 @@
 # myflasky
 my flasky - HO 目前部署位置：http://121.40.213.161/
+
 请在项目根目录下创建项目密码配置文件mydata.ini
 配置项目包括
 [MAIL]
