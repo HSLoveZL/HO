@@ -35,6 +35,7 @@ http://www.ittang.com/2014/0720/13403.html
 2. Linux：
 参考：
 http://virtualenvwrapper.readthedocs.io/en/latest/
+http://my.oschina.net/williambao/blog/205311
 
 
 # 从sqlite转移到Mysql（ubuntu平台）
