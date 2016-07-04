@@ -24,6 +24,15 @@ http://duzhipeng.com/pages/150921/
 2. 在uwsgi的ini文件中 `chdir = /home/www/` 要改成 `chdir = /home/www/my_flask`
 
 # 虚拟环境搭建
+## 普通使用（对于仅需要一个虚拟环境的人群）建议使用virtualenv
+用pip安装virtualenv`pip install virtualenv`
+在项目目录下`virtualenv env`
+1.win环境激活虚拟环境`venv\Scripts\activate`
+2.*unix环境激活虚拟环境`venv\Scripts\activate`
+安装需求包`pip install -r 项目目录下\requirements.txt`
+退出虚拟环境`deactivate`
+
+## 开发使用（对于需要多个虚拟环境并切换的人群）建议使用virtualenvwrapper
 参考：
 http://www.ittang.com/2014/0720/13403.html
 使用virtualenvwrapper
@@ -31,7 +40,6 @@ http://www.ittang.com/2014/0720/13403.html
 首先安装virtualenvwrapper：`pip install virtualenvwrapper-win`虚拟环境默认统一安装在`C:\Users\xxx\Envs`下面
 然后`mkvirtualenv VirtualenvName`
 进入虚拟环境后`pip install -r 项目目录下\requirements.txt`
-
 2. Linux：
 参考：
 http://virtualenvwrapper.readthedocs.io/en/latest/
