@@ -17,12 +17,12 @@ class Config:
     MAIL_USE_TLS = True
     MAIL_USERNAME = cf.get("MAIL", "MAIL_USERNAME")
     MAIL_PASSWORD = cf.get("MAIL", "MAIL_PASSWORD")
-    FLASKY_MAIL_SUBJECT_PREFIX = '[HO]'
-    FLASKY_MAIL_SENDER = '857018659@qq.com'
-    FLASKY_ADMIN = 'wcbieyuan@gmail.com'
-    FLASKY_POSTS_PER_PAGE = 20
-    FLASKY_FOLLOWERS_PER_PAGE = 50
-    FLASKY_COMMENTS_PER_PAGE = 30
+    HO_MAIL_SUBJECT_PREFIX = '[HO]'
+    HO_MAIL_SENDER = '857018659@qq.com'
+    HO_ADMIN = 'wcbieyuan@gmail.com'
+    HO_POSTS_PER_PAGE = 20
+    HO_FOLLOWERS_PER_PAGE = 50
+    HO_COMMENTS_PER_PAGE = 30
 
     @staticmethod
     def init_app(app):
