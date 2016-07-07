@@ -17,6 +17,7 @@ class Config:
     MAIL_USE_TLS = True
     MAIL_USERNAME = cf.get("MAIL", "MAIL_USERNAME")
     MAIL_PASSWORD = cf.get("MAIL", "MAIL_PASSWORD")
+
     HO_MAIL_SUBJECT_PREFIX = '[HO]'
     HO_MAIL_SENDER = '857018659@qq.com'
     HO_ADMIN = 'wcbieyuan@gmail.com'
