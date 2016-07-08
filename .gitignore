@@ -5,3 +5,5 @@ mydata.ini
 *.sqlite
 /flask_venv
 /logs
+
+/instance/
