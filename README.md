@@ -62,7 +62,7 @@ http://www.111cn.net/database/mysql/44142.htm
 在工程中的个人密码配置文件`mydata.ini`中加入MySQL的配置项
 4. （虚拟环境中）`python manage.py shell `
 `db.create_all()`创建所有的表
-`Role.insert_roles()`创建role表中的角色
+`python manage.py deploy()`创建role表中的角色、自我关注等部署操作
 
 # 从sqlite转移到Mysql(Windows平台)
 和Ubuntu中最大的不同的是解决虚拟环境中没有MySQLdb模块的问题
