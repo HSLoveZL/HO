@@ -47,7 +47,7 @@ class PasswordResetRequestForm(Form):
 
 
 class PasswordResetForm(Form):
-    email = StringField(u'Email', validators=[Required(), Length(1, 64),
+    email = StringField(u'邮箱', validators=[Required(), Length(1, 64),
                                              Email()])
     password = PasswordField(u'密码', validators=[
         Required(), EqualTo('password2', message=u'两次密码必须相同')])
