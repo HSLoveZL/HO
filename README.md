@@ -11,6 +11,7 @@ MySQL_PASSWORD=***
 [APP]
 SECRET_KEY=***
 
+
 # 阿里云部署笔记
 Flask + uwsgi + nginx
 主要参考：
@@ -23,15 +24,15 @@ http://duzhipeng.com/pages/150921/
 1. 安装pip时候要用 `sudo apt-get install python-pip`
 2. 在uwsgi的ini文件中 `chdir = /home/www/` 要改成 `chdir = /home/www/my_flask`
 
+
 # 虚拟环境搭建
 ## 普通使用（对于仅需要一个虚拟环境的人群）建议使用virtualenv
 用pip安装virtualenv`pip install virtualenv`
 在项目目录下`virtualenv env`
 1.win环境激活虚拟环境`venv\Scripts\activate`
-2.*unix环境激活虚拟环境`venv\Scripts\activate`
-安装需求包`pip install -r 项目目录下\requirements.txt`
+2.*unix环境激活虚拟环境`source venv/bin/activate`
+安装需求包`pip install -r 项目目录下requirements.txt`
 退出虚拟环境`deactivate`
-
 ## 开发使用（对于需要多个虚拟环境并切换的人群）建议使用virtualenvwrapper
 参考：
 http://www.ittang.com/2014/0720/13403.html
@@ -47,6 +48,7 @@ http://my.oschina.net/williambao/blog/205311
 
 
 # 从sqlite转移到Mysql（ubuntu平台）
+注意：设置utf-8编码
 参考：
 http://www.cnblogs.com/wangqingbaidu/p/3241954.html
 http://www.cnblogs.com/xiazh/archive/2012/12/12/2814289.html
@@ -66,4 +68,5 @@ http://www.111cn.net/database/mysql/44142.htm
 
 # 从sqlite转移到Mysql(Windows平台)
 和Ubuntu中最大的不同的是解决虚拟环境中没有MySQLdb模块的问题
+注意：设置utf-8编码
 通过（虚拟环境中）`pip install mysqlclient`解决
