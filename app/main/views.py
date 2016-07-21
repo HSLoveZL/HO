@@ -147,7 +147,7 @@ def edit(id):
 @login_required
 def delete_post(id):
     post = Post.query.get_or_404(id)
-    if current_user != post.authorand and not current_user.can(Permission.ADMINISTER):
+    if current_user != post.author and not current_user.can(Permission.ADMINISTER):
         abort(403)
     db.session.delete(post)
     flash(u'博客已删除')
