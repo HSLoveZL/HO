@@ -133,12 +133,25 @@ def edit(id):
         abort(403)
     form = PostForm()
     if form.validate_on_submit():
+        post.title = form.title.data
         post.body = form.body.data
         db.session.add(post)
         flash(u'博客已修改')
         return redirect(url_for('.post', id=post.id))
+    form.title.data = post.title
     form.body.data = post.body
     return render_template('edit_post.html', form=form)
+
+
+@main.route('/delete/<int:id>', methods=['GET', 'POST'])
+@login_required
+def delete_post(id):
+    post = Post.query.get_or_404(id)
+    if current_user != post.authorand and not current_user.can(Permission.ADMINISTER):
+        abort(403)
+    db.session.delete(post)
+    flash(u'博客已删除')
+    return redirect(url_for('.index'))
 
 
 @main.route('/follow/<username>')

@@ -25,7 +25,7 @@ ul.posts li.post {
 ul.posts li.post:hover {
     background-color: #f0f0f0;
 }
-div.post-date {
+div.post-date-author {
     float: right;
 }
 div.post-author {
