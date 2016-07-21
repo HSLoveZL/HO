@@ -52,7 +52,7 @@ class EditProfileAdminForm(Form):
 
 class PostForm(Form):
     body = PageDownField(u"来写点什么吧", validators=[Required()])
-    submit = SubmitField(u'提交')
+    submit = SubmitField(u'发表')
 
 
 class CommentForm(Form):
