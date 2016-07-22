@@ -7,11 +7,16 @@
             </a>
         </div>
         <div class="comment-content">
-            <div class="comment-date">{{ moment(comment.timestamp).fromNow() }}</div>
-            <div class="comment-author"><a href="{{ url_for('.user', username=comment.author.username) }}">{{ comment.author.username }}</a></div>
+            <div class="comment-date-author">
+                <a href="{{ url_for('.user', username=comment.author.username) }}">
+                    {{ comment.author.username }}
+                </a>
+                写于
+                {{ moment(comment.timestamp).fromNow() }}
+            </div>
             <div class="comment-body">
                 {% if comment.disabled %}
-                <p><i>此评论已被版主禁止</i></p>
+                <p><i>此评论已被封禁</i></p>
                 {% endif %}
                 {% if moderate or not comment.disabled %}
                     {% if comment.body_html %}
